@@ -26,9 +26,19 @@ Capybara.app = App
 
     feature "users health points are displayed" do
       scenario "just after entering player names" do
+      sign_in_and_play
       visit ("/play")
       expect(page).to have_content "100"
     end
+    end
+
+    feature "player 1 attacks player 2" do
+      scenario "there are options for both players to attack each other" do
+        sign_in_and_play
+        expect(page).to have_field("Attack")
+
+
+      end
     end
 
 
