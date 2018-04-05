@@ -22,5 +22,12 @@ Capybara.app = App
 
     end
 
+    feature "users health points are displayed" do
+      scenario "just after entering player names" do
+      visit ("/play")
+      expect(page).to have_content "100"
+    end
+    end
+
 
   end
