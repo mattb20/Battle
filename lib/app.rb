@@ -2,6 +2,6 @@ require 'sinatra/base'
 
 class App < Sinatra::Base
   get '/' do
-    'hello world'
+    'Testing infrastructure working!'
   end
 end
