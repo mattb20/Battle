@@ -28,6 +28,7 @@ end
   get '/play' do
     @player1name = session[:player1name]
     @player2name = session[:player2name]
+    @hitpoints = 100
     erb :play
 
   end
