@@ -10,15 +10,15 @@ Capybara.app = App
 #     expect(page).to have_content("Testing infrastructure working!")
 #   end
 
-  feature "homepage gives forms for player to fill in names and submit them" do
-    scenario "on visiting the homepage" do
-      sign_in_and_play
-      # visit("/")
-      # expect(page).to have_field("player1name")
-      # expect(page).to have_field("player2name")
-      # fill_in 'player1name', with: "Jordan"
-      # fill_in 'player2name', with: "Matthew"
-      # click_button("Submit Player names")
+  feature "Player names can be submitted" do
+    scenario "homepage has options for player names to be submitted" do
+      # sign_in_and_play
+      visit("/")
+      expect(page).to have_field("player1name")
+      expect(page).to have_field("player2name")
+      fill_in 'player1name', with: "Jordan"
+      fill_in 'player2name', with: "Matthew"
+      click_button("Submit Player names")
       expect(page).to have_content "Jordan"
       expect(page).to have_content "Matthew"
 
@@ -28,17 +28,33 @@ Capybara.app = App
       scenario "just after entering player names" do
       sign_in_and_play
       visit ("/play")
-      expect(page).to have_content "100"
+      expect(page).to have_content $player1hitpoints.to_s
     end
     end
 
     feature "player 1 attacks player 2" do
-      scenario "there are options for both players to attack each other" do
-        sign_in_and_play
-        expect(page).to have_field("Attack")
 
+
+      scenario "player 1 can see a button to attack player 2" do
+        sign_in_and_play
+        visit("/play")
+        expect(page).to have_button("player2attack")
 
       end
+
+      scenario "clicks button to attack player 2 and receives a confirmation" do
+      sign_in_and_play
+      visit("/play")
+      click_button("player2attack")
+      visit("/attack2")
+
+      # expect(page).to have_content $player1hitpoints.to_s
+      # expect(page).to have_content $player2hitpoints.to_s
+
+      expect(page).to have_content 'Jordan attacked Matthew'
+
+      end
+
     end
 
 

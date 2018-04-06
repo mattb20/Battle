@@ -1,0 +1,20 @@
+<head>
+<style>
+p { border-style:solid; border-color:#287EC7; font-size: 40px}
+</style>
+
+</head>
+
+<h1> The Arena </h1>
+<form action="/play" method="post">
+<font size="80"><%= @player1name %></font> <br>
+<p><%= $player1hitpoints %><br></p>
+<input type="submit" name = "attackplayer1" value="attackplayer1">
+<!-- <button type="button" name="attackplayer1" value="Attack"></button> -->
+<br>
+<br>
+<br>
+<font size="80"><%= @player2name %></font><br>
+<p><%= $player2hitpoints - 10%></p>
+<input type="submit" name = "attackplayer2" value="attackplayer2">
+</form>
