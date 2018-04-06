@@ -48,14 +48,12 @@ Capybara.app = App
       click_button("player2attack")
       visit("/attack2")
 
-      # expect(page).to have_content $player1hitpoints.to_s
-      # expect(page).to have_content $player2hitpoints.to_s
 
       expect(page).to have_content 'Jordan attacked Matthew'
 
       end
       scenario "player 2 health points are reduced by 10" do
-        
+
       end
 
 

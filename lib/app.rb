@@ -31,8 +31,8 @@ end
 
   get '/play' do
 
-    @player1name = session[:player1name]
-    @player2name = session[:player2name]
+    @player1 = Player.new(session[:player1name])
+    @player2 = Player.new(session[:player2name])
 
     erb :play
 
@@ -42,17 +42,21 @@ end
 
 
   get '/attack2' do
+    @player1 = Player.new(session[:player1name])
+    @player2 = Player.new(session[:player2name])
 
-    @player_1_name = session[:player1name]
-    @player_2_name = session[:player2name]
+    # @player_1_name = session[:player1name]
+    # @player_2_name = session[:player2name]
     erb :attack2
 
   end
 
   get '/attack1' do
+    @player1 = Player.new(session[:player1name])
+    @player2 = Player.new(session[:player2name])
 
-    @player_1_name = session[:player1name]
-    @player_2_name = session[:player2name]
+    # @player_1_name = session[:player1name]
+    # @player_2_name = session[:player2name]
     erb :attack1
   end
 
