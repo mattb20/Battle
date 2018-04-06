@@ -12,4 +12,10 @@ RSpec.describe Player do
     end
   end
 
+  describe '#hitpoints' do
+    it 'returns the hitpoints' do
+      expect(player.hitpoints).to eq Player::DEFAULT_HP
+    end
+  end
+
 end
