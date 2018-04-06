@@ -17,5 +17,9 @@ RSpec.describe Player do
       expect(player.hitpoints).to eq Player::DEFAULT_HP
     end
   end
+  #
+  # describe '#attack' do
+  #
+  # end
 
 end

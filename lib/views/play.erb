@@ -7,7 +7,7 @@ p { border-style:solid; border-color:#287EC7; font-size: 40px}
 
 <h1> The Arena </h1>
 <font size="80"><%= @player1.name %></font> <br>
-<p><%= @player1.hitpoints %></p><br>
+<p><%= @player1.hitpoints %></p>HP<br>
 <form action="/attack1">
 <input type="submit" id="player1attack" value="Attack">
 </form>
@@ -16,7 +16,7 @@ p { border-style:solid; border-color:#287EC7; font-size: 40px}
 <br>
 <br>
 <font size="80"><%= @player2.name %></font><br>
-<p><%= @player2.hitpoints %></p>
+<p><%= @player2.hitpoints %>HP</p>
 <form action="/attack2">
 <input type="submit" id="player2attack" value="Attack">
 </form>

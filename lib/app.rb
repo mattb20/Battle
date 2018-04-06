@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require './lib/player_class'
+require './lib/game'
 
 
 
