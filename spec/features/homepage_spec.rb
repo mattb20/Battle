@@ -10,6 +10,7 @@ Capybara.app = App
 #     expect(page).to have_content("Testing infrastructure working!")
 #   end
 
+
   feature "Player names can be submitted" do
     scenario "homepage has options for player names to be submitted" do
       # sign_in_and_play
@@ -25,10 +26,13 @@ Capybara.app = App
     end
 
     feature "users health points are displayed" do
+      player1 = Player.new("Jordan")
+      player2 = Player.new("Matt")
       scenario "just after entering player names" do
       sign_in_and_play
       visit ("/play")
-      expect(page).to have_content $player1hitpoints.to_s
+      expect(page).to have_content player1.hitpoints
+      expect(page).to have_content player2.hitpoints
     end
     end
 
@@ -53,6 +57,11 @@ Capybara.app = App
 
       end
       scenario "player 2 health points are reduced by 10" do
+        sign_in_and_play
+        visit("/play")
+        click_button("player2attack")
+        visit("/attack2")
+
 
       end
 

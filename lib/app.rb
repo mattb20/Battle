@@ -55,8 +55,7 @@ end
     @player1 = Player.new(session[:player1name])
     @player2 = Player.new(session[:player2name])
 
-    # @player_1_name = session[:player1name]
-    # @player_2_name = session[:player2name]
+
     erb :attack1
   end
 

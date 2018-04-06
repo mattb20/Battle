@@ -1,6 +1,7 @@
 class Player
 
-  attr_reader :hitpoints, :name
+  attr_reader :name, :hitpoints
+  attr_writer :hitpoints
 
   def initialize(name, hitpoints = 100)
 
