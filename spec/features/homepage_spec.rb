@@ -54,6 +54,10 @@ Capybara.app = App
       expect(page).to have_content 'Jordan attacked Matthew'
 
       end
+      scenario "player 2 health points are reduced by 10" do
+        
+      end
+
 
     end
 

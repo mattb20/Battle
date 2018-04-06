@@ -4,8 +4,9 @@ require './lib/player_class'
 
 
 class App < Sinatra::Base
-  $player1hitpoints = 100
-  $player2hitpoints = 100
+
+  # $player1hitpoints = 100
+  # $player2hitpoints = 100
 
  configure do
   enable :sessions
