@@ -6,10 +6,10 @@ p { border-style:solid; border-color:#287EC7; font-size: 40px}
 </head>
 
 <h1> The Arena </h1>
-<%= @player_1_name %> attacked <%= @player_2_name %><br>
-<%= @player_2_name %> lost 10 HP!<br>
-<font size="80"><%= @player1name %></font> <br>
-<p><%= @player1.hitpoints = @player1.hitpoints - 10 %><br></p>
+<%= @game.player1.name %> attacked <%= @game.player2.name %><br>
+<%= @game.player2.name %> lost 10 HP!<br>
+<font size="80"><%= @game.player1.name %></font> <br>
+<p><%= @game.player1.hitpoints = %><br></p>
 <form action="/attack1">
 <input type="submit" id="player1attack" name="player1attack" value="Attack">
 </form>
@@ -17,8 +17,8 @@ p { border-style:solid; border-color:#287EC7; font-size: 40px}
 <br>
 <br>
 <br>
-<font size="80"><%= @player2name %></font><br>
-<p><%= @player2.hitpoints %></p>
+<font size="80"><%= @game.player2.name %></font><br>
+<p><%= @game.player2.hitpoints %></p>
 <form action="/attack2">
 <input type="submit" id="player2attack" name="player2attack" value="Attack">
 </form>

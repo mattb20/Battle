@@ -34,6 +34,7 @@ end
 
     @player1 = Player.new(session[:player1name])
     @player2 = Player.new(session[:player2name])
+    @game = Game.new
 
     erb :play
 
